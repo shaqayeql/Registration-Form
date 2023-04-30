@@ -74,7 +74,7 @@ public class Register implements ActionListener {
         int flag=0;
 
         if(button.getName() == "ثبت نام"){
-            if(fullName.length() < 4) {
+            if(fullName.length() < 3) {
                 System.out.println("Name should be more than 3 letters!!!");
                 flag = 1;
             }
