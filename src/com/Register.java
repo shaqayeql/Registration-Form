@@ -67,9 +67,25 @@ public class Register implements ActionListener {
         fullName = text1.getText();
         firstAddress = text2.getText();
         secondAddress = text3.getText();
-        age = Integer.parseInt(text4.getText());
-        height = Double.parseDouble(text5.getText());
-        weight = Double.parseDouble(text6.getText());
+
+        try {
+            Integer.parseInt(text4.getText());
+            age = Integer.parseInt(text4.getText());
+        } catch(NumberFormatException n){
+            System.out.println("You should enter NUMBER for age!!!");
+        }
+        try {
+            Double.parseDouble(text5.getText());
+            height = Double.parseDouble(text5.getText());
+        } catch(NumberFormatException n){
+            System.out.println("You should enter NUMBER for height!!!");
+        }
+        try {
+            Double.parseDouble(text6.getText());
+            weight = Double.parseDouble(text6.getText());
+        } catch(NumberFormatException n){
+            System.out.println("You should enter NUMBER for weight!!!");
+        }
 
         int flag=0;
 
